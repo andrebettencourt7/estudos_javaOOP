@@ -24,12 +24,9 @@ public class Principal {
 		triangleY.sideA = scanner.nextDouble();
 		triangleY.sideB = scanner.nextDouble();
 		triangleY.sideC = scanner.nextDouble();
-
-		double p = (triangleX.sideA + triangleX.sideB + triangleX.sideC) / 2;
-		double areaX = Math.sqrt(p * (p - triangleX.sideA) * (p - triangleX.sideB) * (p - triangleX.sideC));
 		
-		p = (triangleY.sideA + triangleY.sideB + triangleY.sideC) / 2;
-		double areaY = Math.sqrt(p * (p - triangleY.sideA) * (p - triangleY.sideB) * (p - triangleY.sideC));
+		double areaX = triangleX.area();
+		double areaY = triangleY.area();
 		
 		System.out.printf("triangulo X area: %.4f%n", areaX);
 		System.out.printf("triangulo Y area: %.4f%n", areaY);
@@ -39,8 +36,6 @@ public class Principal {
 		}else {
 			System.out.println("O triângulo Y tem a maior área");
 		}
-		
-		
 		
 		scanner.close();
 
